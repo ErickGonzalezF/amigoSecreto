@@ -1,34 +1,48 @@
-### README - Juego para Sortear Amigos 🎯
+### README - Juego del **Amigo Secreto** 🎁
 
-Este proyecto es una sencilla aplicación web que permite agregar amigos a una lista y posteriormente sortearlos de forma aleatoria.
+Este proyecto es una aplicación web interactiva que permite agregar amigos a una lista y posteriormente sortear aleatoriamente a uno de ellos, ideal para organizar un **Amigo Secreto** de forma rápida y divertida.
 
 ---
 
 ## 🚀 Características
-- Agregar nombres de amigos a una lista.
-- Visualizar en tiempo real la lista de amigos agregados.
-- Función para realizar un sorteo aleatorio entre los amigos.
+✅ Agregar amigos a una lista.  
+✅ Visualizar en tiempo real la lista de amigos agregados.  
+✅ Función para sortear aleatoriamente a uno de los amigos de la lista.  
+✅ Interfaz amigable con un diseño atractivo.  
 
 ---
 
 ## 📋 Instrucciones de Uso
 
-1. **Clonar el repositorio**  
-   ```bash
-   git clone https://github.com/ErickGonzalezF/amigoSecreto.git
+### 1. **Clonar el repositorio**
+```bash
+git clone https://github.com/ErickGonzalezF/amigoSecreto.git
+cd /amigoSecreto
+```
 
-   ```
+### 2. **Abrir el archivo `index.html`**  
+Utiliza tu navegador web favorito para visualizar la interfaz.
 
-2. **Abrir el archivo `index.html`** en tu navegador preferido.
+### 3. **Agregar amigos a la lista**
+- Escribe el nombre de un amigo en el campo de texto.  
+- Haz clic en el botón **"Añadir"** para agregarlo a la lista.  
 
-3. **Agregar amigos a la lista**
-   - Escribe el nombre de un amigo en el campo de texto.
-   - Haz clic en el botón "Agregar Amigo".
-   - El nombre se añadirá a la lista que se muestra debajo.
+### 4. **Sortear un amigo**
+- Haz clic en el botón **"Sortear amigo"**.  
+- Se mostrará en pantalla el nombre del amigo seleccionado de forma aleatoria.  
 
-4. **Sorteo de amigos**
-   - (Si deseas agregar esta función) Incluye un botón para "Sortear Amigo".
-   - Al hacer clic en este botón, se seleccionará aleatoriamente uno de los amigos agregados.
+---
+
+## 🖥️ Estructura del Proyecto
+```
+/proyecto-amigo-secreto
+ ├── index.html
+ ├── style.css
+ ├── app.js
+ └── assets
+     ├── amigo-secreto.png
+     └── play_circle_outline.png
+```
 
 ---
 
@@ -64,29 +78,27 @@ function actualizarLista() {
 
 function sortearAmigo() {
     if (amigos.length === 0) {
-        alert('Agrega amigos antes de sortear.');
+        alert("Agrega primero amigos");
     } else {
-        let ganador = amigos[Math.floor(Math.random() * amigos.length)];
-        alert(`🎉 El amigo sorteado es: ${ganador} 🎉`);
+        let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+        document.getElementById("resultado").innerHTML = `🎉 ${amigos[indiceAleatorio]} 🎉`;
     }
 }
 ```
 
 ---
 
-## 🖥️ Estructura del Proyecto
-```
-/proyecto-sorteo
- ├── index.html
- ├── style.css
- └── script.js
-```
+## 🎨 Estilo Visual
+El proyecto utiliza la fuente **Inter** y **Merriweather**, proporcionando una estética moderna y limpia. Además, incluye imágenes para mejorar la experiencia visual del usuario.
+
+---
+
+## 🧩 Mejoras Futuras
+🔹 Agregar opción para eliminar amigos de la lista.  
+🔹 Permitir múltiples sorteos sin repetir nombres.  
+🔹 Incluir una función para reiniciar la lista.  
 
 ---
 
 ## 📄 Licencia
-Este proyecto es de código abierto y puede ser utilizado libremente. 
-
----
-
-¡Disfruta del juego y que gane el mejor amigo! 🏆
+Este proyecto es de código abierto y puede ser utilizado libremente.  
